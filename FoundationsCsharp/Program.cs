@@ -7,26 +7,20 @@ namespace PrimeiroProjeto
     {
         static void Main(string[] args)
         {
-            char genero = 'F';
             int idade = 32;
             double saldo = 10.35784;
             String nome = "Maria";
 
-            // A diferença entre Console.write e Console.writeLine é que o sem Line ele não faz uma quebra de linha.
+            // Há três maneiras de imprimir varias variaveis na tela de uma vez, utizando apenas um Console.WriteLine
+            // São elas: Utilizando-se dos Placeholders, Interpolações e a mais antiga Concatenação
+            // O que fica exemplificado a seguir:
 
+            Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2:F2} reais", nome, idade, saldo); // Placeholder 
 
-            Console.Write("Bom dia!"); 
-            Console.WriteLine("Boa tarde!");
-            Console.WriteLine("Boa noite!");
-            Console.WriteLine("---------------------------");
-            Console.WriteLine(genero);
-            Console.WriteLine(idade);
-            Console.WriteLine(saldo);
-            Console.WriteLine(nome);
-            Console.WriteLine(saldo.ToString("F2")); // O método toString("F2") é usado para delimitar quantos números irão vir após a virgula
-            Console.WriteLine(saldo.ToString("F4")); // O método toString("F2") é usado para delimitar quantos números irão vir após a virgula
-            Console.WriteLine(saldo.ToString("F4", CultureInfo.InvariantCulture)); // O outro parâmetro passado para o método toString, no caso
-            // CultureInfo.InvariantCulture, faz com que ele ignore todos os tipos de delimitação de cada país ( seja virgula, etc ) para apenas ponto ( . ) 
+            Console.WriteLine($"{nome} tem {idade} anos e tem saldo igual a {saldo:F2} reais"); // Interpolação
+
+            Console.WriteLine(nome + " tem " + idade + " anos e tem saldo igual a "
+            + saldo.ToString("F2", CultureInfo.InvariantCulture) + " reais"); // Concatenação
         }
     }
 }
