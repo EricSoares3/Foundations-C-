@@ -7,31 +7,32 @@ namespace PrimeiroProjeto
     {
         static void Main(string[] args)
         {
+            // Saída de dados em C# utiliza-se do método Console.ReadLine
 
-            // Casting, e conversão implicita
+            string frase = Console.ReadLine();
 
-            float e = 2;
-            double t = e;
-            Console.WriteLine(t); // conversão implicita 
+            string x = Console.ReadLine();
 
+            string y = Console.ReadLine();
 
+            string z = Console.ReadLine();
 
-            double a;
-            float b;
-            a = 5.1;
-            b = (float)a; // casting double para float
-            Console.WriteLine(b);
+            string[] v = Console.ReadLine().Split(' '); // Irá criar um vetor, que irá armazenar 3 variaveis, que depois irá ser divido pelo método Split
 
-            double x;
-            int z;
-            x = 5.1;
-            z = (int)x; // casting double para int
+            string a = v[0]; // atribuição do valor de acordo com a posição do indice
+
+            string b = v[1];   // atribuição do valor de acordo com a posição do indice 
+
+            string c = v[2];    // atribuição do valor de acordo com a posição do indice
+
+            Console.WriteLine("Você digitou: ");
+            Console.WriteLine(frase);
+            Console.WriteLine(x);
+            Console.WriteLine(y);
             Console.WriteLine(z);
-
-            int c = 5;
-            int d = 2;
-            double resultado = (double)c / d; // casting do resultado da divisão de dois int para double
-            Console.WriteLine(resultado);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
         }
     }
 }
