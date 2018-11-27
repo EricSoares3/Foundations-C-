@@ -9,30 +9,30 @@ namespace PrimeiroProjeto
         {
             // Saída de dados em C# utiliza-se do método Console.ReadLine
 
-            string frase = Console.ReadLine();
+            int n1 = int.Parse(Console.ReadLine()); // O método Parse, converte o tipo de dado do ReadLine que por padrão é String, para int
 
-            string x = Console.ReadLine();
+            char ch = char.Parse(Console.ReadLine());
 
-            string y = Console.ReadLine();
+            double n2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            string z = Console.ReadLine();
+            string[] vet = Console.ReadLine().Split(' ');
 
-            string[] v = Console.ReadLine().Split(' '); // Irá criar um vetor, que irá armazenar 3 variaveis, que depois irá ser divido pelo método Split
+            string nome = vet[0];
 
-            string a = v[0]; // atribuição do valor de acordo com a posição do indice
+            char sexo = char.Parse(vet[1]);
 
-            string b = v[1];   // atribuição do valor de acordo com a posição do indice 
+            int idade = int.Parse(vet[2]);
 
-            string c = v[2];    // atribuição do valor de acordo com a posição do indice
+            double altura = double.Parse(vet[3], CultureInfo.InvariantCulture);
 
-            Console.WriteLine("Você digitou: ");
-            Console.WriteLine(frase);
-            Console.WriteLine(x);
-            Console.WriteLine(y);
-            Console.WriteLine(z);
-            Console.WriteLine(a);
-            Console.WriteLine(b);
-            Console.WriteLine(c);
+            Console.WriteLine("Você digitou:");
+            Console.WriteLine(n1);
+            Console.WriteLine(ch);
+            Console.WriteLine(n2.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine(nome);
+            Console.WriteLine(sexo);
+            Console.WriteLine(idade);
+            Console.WriteLine(altura.ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }
