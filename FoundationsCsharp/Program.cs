@@ -5,22 +5,32 @@ namespace PrimeiroProjeto
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Qual a hora atual?");
-            int hora = int.Parse(Console.ReadLine());
-            if (hora < 12)
+            static void Main(string[] args)
             {
-                Console.WriteLine("Bom dia!");
+                Console.WriteLine("Digite três números:");
+                int n1 = int.Parse(Console.ReadLine());
+                int n2 = int.Parse(Console.ReadLine());
+                int n3 = int.Parse(Console.ReadLine());
+                double resultado = Maior(n1, n2, n3);
+                Console.WriteLine("Maior = " + resultado);
             }
-            else if (hora < 18)
+
+            static int Maior(int a, int b, int c)
             {
-                Console.WriteLine("Boa tarde!");
-            }
-            else
-            {
-                Console.WriteLine("Boa noite!");
+                int m;
+                if (a > b && a > c)
+                {
+                    m = a;
+                }
+                else if (b > c)
+                {
+                    m = b;
+                }
+                else
+                {
+                    m = c;
+                }
+                return m;
             }
         }
-    }
 }
