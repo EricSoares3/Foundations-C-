@@ -7,32 +7,15 @@ namespace PrimeiroProjeto
     {
         static void Main(string[] args)
         {
-            // Saída de dados em C# utiliza-se do método Console.ReadLine
-
-            int n1 = int.Parse(Console.ReadLine()); // O método Parse, converte o tipo de dado do ReadLine que por padrão é String, para int
-
-            char ch = char.Parse(Console.ReadLine());
-
-            double n2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            string[] vet = Console.ReadLine().Split(' ');
-
-            string nome = vet[0];
-
-            char sexo = char.Parse(vet[1]);
-
-            int idade = int.Parse(vet[2]);
-
-            double altura = double.Parse(vet[3], CultureInfo.InvariantCulture);
-
-            Console.WriteLine("Você digitou:");
-            Console.WriteLine(n1);
-            Console.WriteLine(ch);
-            Console.WriteLine(n2.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine(nome);
-            Console.WriteLine(sexo);
-            Console.WriteLine(idade);
-            Console.WriteLine(altura.ToString("F2", CultureInfo.InvariantCulture));
+            bool c1 = 2 > 3 || 4 != 5; // true
+            bool c2 = !(2 > 3) && 4 != 5; // true
+            Console.WriteLine(c1);
+            Console.WriteLine(c2);
+            Console.WriteLine("--------------");
+            bool c3 = 10 < 5; // false
+            bool c4 = c1 || c2 && c3; // true
+            Console.WriteLine(c3);
+            Console.WriteLine(c4);
         }
     }
 }
